@@ -1,0 +1,7 @@
+{
+    "type": "QUALIFY_LEAD",
+    "goal": "Qualify an inbound lead for a SaaS product",
+    "context": { "lead_source": "website", "company_size": 25, "industry": "HVAC" },
+    "constraints": { "no_pii": true },
+    "priority": 3
+  }

@@ -2,10 +2,20 @@
 
 An open framework for designing and orchestrating specialized AI agents with shared memory and tool registries.
 
-Most AI systems today are chat interfaces.  
+Most AI systems today are chat interfaces.
 This project models operational AI systems.
 
 ---
+
+## Quickstart (30s)
+
+Run the API:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m uvicorn app.main:app --reload
 
 ## Why This Exists
 
@@ -126,3 +136,25 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python -m uvicorn app.main:app --reload
+
+curl -X POST http://127.0.0.1:8000/tasks/execute \
+  -H "Content-Type: application/json" \
+  -d '{
+    "type": "MARKETING_PLAN",
+    "goal": "Create a 30-day plan for a local dentist",
+    "context": {"country":"ES"},
+    "constraints": {"budget_eur": 300},
+    "priority": 3
+  }'
+
+  {
+  "task_id": "unknown",
+  "status": "success",
+  "selected_agent": "marketing_agent",
+  "steps": [
+    {"name":"analyze_marketing_requirements","status":"success","output":{"analyzed":true},"error":null},
+    {"name":"generate_marketing_strategy","status":"success","output":{"strategy":"dummy_strategy"},"error":null}
+  ],
+  "output": {"result":"Marketing task executed"},
+  "error": null
+}

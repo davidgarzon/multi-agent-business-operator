@@ -1,0 +1,7 @@
+{
+    "type": "OPS_AUTOMATION",
+    "goal": "Generate an ops automation checklist for monthly invoicing",
+    "context": { "tooling": ["Google Sheets", "Slack"], "frequency": "monthly" },
+    "constraints": { "max_steps": 12 },
+    "priority": 2
+  }
