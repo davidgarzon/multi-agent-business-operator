@@ -1,0 +1,7 @@
+{
+  "type": "MARKETING_PLAN",
+  "goal": "Create a 30-day plan for a local dentist",
+  "context": { "country": "ES" },
+  "constraints": { "budget_eur": 300 },
+  "priority": 3
+}

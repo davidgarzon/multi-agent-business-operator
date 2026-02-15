@@ -116,3 +116,13 @@ AI systems should be:
 
 This is not a chatbot framework.  
 It is a system architecture blueprint.
+
+## Quick Demo
+
+Run the API:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m uvicorn app.main:app --reload
