@@ -7,8 +7,8 @@ ENDPOINT="${ENDPOINT:-/tasks/execute}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Usage:
-#   ./examples/run_demo.sh                # uses task_marketing_plan.json
-#   ./examples/run_demo.sh task_ops.json  # uses a different payload file inside examples/
+#   ./examples/run_demo.sh                         # default payload
+#   ./examples/run_demo.sh task_ops_automation.json
 PAYLOAD_NAME="${1:-task_marketing_plan.json}"
 PAYLOAD_FILE="${SCRIPT_DIR}/${PAYLOAD_NAME}"
 
